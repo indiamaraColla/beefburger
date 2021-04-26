@@ -39,7 +39,7 @@ const ListSoup = () => {
               <DescriptionMenu key={index}>
                 <BoxData>
                   <div>
-                    <img src={item.image} alt="" />
+                    <img src={item.image} alt={item.title} />
                   </div>
                   <div>
                     <h4>{item.title}</h4>
