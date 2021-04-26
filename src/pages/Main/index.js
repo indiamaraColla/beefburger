@@ -1,38 +1,27 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
-
-import { Menu, Logo, Button } from './style';
-
-import BtnDarkBlue from '../../components/Button/BtnDarkBlue';
+import { Container, Content, Background, Logo, Title, Image, CardDesc, SubTitle, Link } from './style';
 
 import burger from '../../img/burger.jpg';
 
 const Main = () => {
-  let history = useHistory();
-
-  const handleClickAsk = () => {
-    history.push('/signin');
-  };
-
   return (
-    <Menu>
-      <Logo>
-        <div>
-          <img src={burger} alt="burger" />
-        </div>
-        <div>
-          <span>
+    <Container>
+      <Content>
+        <Logo>
+          <Image src={burger} alt="burger" />
+          <Title>
             Beef <strong>Burger</strong>
-          </span>
-        </div>
-      </Logo>
-      <span>
-        Deu fome? <strong>Sem problema é só pedir...</strong>
-      </span>
-      <Button>
-        <BtnDarkBlue onClick={handleClickAsk} outline text="Pedir" />
-      </Button>
-    </Menu>
+          </Title>
+        </Logo>
+        <CardDesc>
+          <SubTitle>
+            <strong> Deu fome?</strong> Sem problema é só...
+          </SubTitle>
+          <Link href="/signin">pedir</Link>
+        </CardDesc>
+      </Content>
+      <Background />
+    </Container>
   );
 };
 export default Main;
