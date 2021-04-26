@@ -1,8 +1,15 @@
+import React from 'react';
+import GlobalStyle from './styles/global';
+import AppStore from './store/index';
+
+import Routes from './routes';
+
 function App() {
   return (
-    <div className="App">
-      <h1>hello world</h1>
-    </div>
+    <AppStore>
+      <GlobalStyle />
+      <Routes />
+    </AppStore>
   );
 }
 

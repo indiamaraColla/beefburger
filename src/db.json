@@ -1,0 +1,160 @@
+{
+  "burger": [
+    {
+      "id": 1,
+      "title": "Burger Acebolado",
+      "price": 20.00,
+      "image": "/img/burgeracebolado.jpeg",
+      "description": "Pão caseiro, hamburger, alface, tomate, bacon, cebola, queijo prado  130 grama de batata frita"
+    },
+    {
+      "id": 2,
+      "title": "Burger pomerode",
+      "price": 15.00,
+      "image": "/img/burgeracebolado.jpeg",
+      "description": "Pão caseiro, bolinho de carne benkendorff alface e kreuterkase."
+    },
+    {
+      "id": 3,
+      "title": "Burger alcatra",
+      "price": 22.00,
+      "image": "/img/burgerGourmet.jpg",
+      "description": "Pao 14cm hambúrguer alcatra queijo alface tomate milho ervilha e pepino, 130 grama de batata rustica"
+    },
+    {
+      "id": 4,
+      "title": "Burger calabresa",
+      "price": 20.00,
+      "image": "/img/burgeracebolado.jpeg",
+      "description": "Pao 14cm hambúrguer calabresa queijo alface tomate milho ervilha e pepino, 130 grama de batata frita"
+    },
+    {
+      "id": 5,
+      "title": "Burger Gourmet",
+      "price": 25.00,
+      "image": "/img/burgerGourmet.jpg",
+      "description": "Pão caseiro, hamburger de churrasco, tomate, cebola, queijo prado, 130 grama de batata rustica"
+    },
+    {
+      "id": 6,
+      "title": "Burger Picanha",
+      "price": 27.00,
+      "image": "/img/burgeracebolado.jpeg",
+      "description": "Pao 17cm hambúrguer picanha, ovo, mostarda, queijo, alface, tomate, milho, ervilha e 130 grama de batata rustica"
+    },
+    {
+      "id": 7,
+      "title": "Burger mingnon",
+      "price": 25.00,
+      "image": "/img/burgerGourmet.jpg",
+      "description": "Pão especial, alface, tomate, pepino, mignon, queijo, molho barbecue, queijo prado  130 grama de batata rustica"
+    },
+    {
+      "id": 8,
+      "title": "Burger Bacon",
+      "price": 30.00,
+      "image": "/img/burgeracebolado.jpeg",
+      "description": "Pão caseiro, hamburger, alface, tomate, bacon, cebola, queijo prado e 130 grama de batata frita"
+    }
+  ],
+
+  "pizza": [
+    {
+      "id": 1,
+      "title": "Pizza Grande",
+      "price": 65.00,
+      "image": "/img/pizzaCalabresa.jpeg",
+      "description": "Pizza 60cm peito de peru + uma pizza baby doce de chocolate preto com morango"
+    },
+    {
+      "id": 2,
+      "title": "Pizza Extra Grande",
+      "price": 85.00,
+      "image": "/img/pizzaCalabresa.jpeg",
+      "description": "Pizza 75cm no sabor quatro queijo e strogonoff + uma pizza baby doce de chocolate preto/branco com morango"
+    },
+    {
+      "id": 3,
+      "title": "Pizza Media",
+      "price": 45.00,
+      "image": "/img/pizzaCalabresa.jpeg",
+      "description": "Pizza 60cm no sabor calabresa com borda de catupiry"
+    },
+    {
+      "id": 4,
+      "title": "Pizza Pequena",
+      "price": 35.00,
+      "image": "/img/pizzaCalabresa.jpeg",
+      "description": "Pizza baby doce de chocolate preto/branco com morango"
+    },
+    {
+      "id": 5,
+      "title": "Pizza Napolitana",
+      "price": 55.00,
+      "image": "/img/pizzaCalabresa.jpeg",
+      "description": "Pizza 60cm de mussarela, tomate em rodelas e parmesão + uma pizza baby doce de chocolate preto com leite condensado"
+    },
+    {
+      "id": 6,
+      "title": "Pizza Marguerita/ Frango com catupiry",
+      "price": 85.00,
+      "image": "/img/pizzaCalabresa.jpeg",
+      "description": "Pizza 75cm de mussarela, tomate em rodelas e manjericão/ mussarela, frango e catupiry + baby doce chocolate preto/branco"
+    },
+    {
+      "id": 7,
+      "title": "Pizza Chester com catupiry",
+      "price": 65.00,
+      "image": "/img/pizzaCalabresa.jpeg",
+      "description": "Pizza 60cm de mussarela, chester e catupiry + uma pizza baby doce de chocolate preto com morango"
+    }
+  ],
+
+  "soup": [  
+    {
+      "id": 1,
+      "title": "Caldo de vegetais",
+      "price": 15.00,
+      "image": "/img/soupTomate.jpeg ",
+      "description": "Sopa de abrobrinha, batatinha, cenoura e salsinha"
+    },
+     {
+      "id": 3,
+      "title": "Caldo de legumes",
+      "price": 20.00,
+      "image": "/img/soupVegetais.jpeg",
+      "description": "Sopa de abrobrinha, temperos verdes "
+    },
+    {
+      "id": 4,
+      "title": "Caldo de feijão",
+      "price": 25.00,
+      "image": "/img/soupFeijao.jpeg",
+      "description": "Sopa de feijão preto/carioca com tomate seco "
+    }
+  ],
+  "promocao": [
+    {
+      "id": 1,
+      "title": "Burger",
+      "text": "Dois mini hamburger Gourmet",
+      "price": 20.00,
+      "image": "/img/burgerGourmet.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Pizza",
+      "text": "Grande 35cm + Baby Doce 20cm + Refri. 2L",
+      "price": 60.00,
+      "image": "/img/pizzaCalabresa.jpeg"
+    },
+    {
+      "id": 3,
+      "title": "Soup",
+      "text": "Duas sopas grandes tomate/feijão",
+      "price": 25.00,
+      "image": "/img/soupTomate.jpeg"
+    }
+  ]
+ 
+}
