@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Menu = styled.div`
   padding: 20px;
@@ -6,21 +6,20 @@ export const Menu = styled.div`
 export const MenuDescription = styled.div`
   max-width: 820px;
   margin: 0 auto;
-  
 `;
 export const BoxDescription = styled.div`
-  background: #FFF;
-  padding:30px;
+  background: #fff;
+  padding: 30px;
   margin: 30px 0;
   border-radius: 18px;
 
   h3 {
-  border-bottom: 2px solid #ccc;
-  padding: 6px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
   }
 `;
 
@@ -30,12 +29,14 @@ export const BoxList = styled.div`
   display: grid;
   align-items: center;
   grid-template-rows: 1fr auto 0;
-  
-  h4, p{
-    color: #DE080D;
+  border-bottom: 1px solid #ccc;
+
+  h4,
+  p {
+    color: #de080d;
   }
-  span{
-     font-size: 14px;
+  span {
+    font-size: 14px;
   }
 `;
 export const Box = styled.div`
@@ -48,18 +49,17 @@ export const TotalPrice = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 20px 0;
-
 `;
 export const RemoverLixeira = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 20px 0;
-  
-  h5{
+
+  h5 {
     margin: 0 10px;
   }
-    img {
+  img {
     height: 20px;
     margin-left: 10px;
   }
@@ -69,11 +69,11 @@ export const Adress = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 20px 0;
-  p{
+  p {
     color: #000;
   }
 
-  img{
+  img {
     height: 60px;
     margin-right: 20px;
   }
@@ -81,7 +81,7 @@ export const Adress = styled.div`
 export const Button = styled.div`
   font-size: 16px;
   display: block;
-  
+
   .hidden {
     display: none;
   }
