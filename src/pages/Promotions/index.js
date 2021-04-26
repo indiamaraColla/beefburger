@@ -37,7 +37,7 @@ const ListPizza = () => {
               <div key={index}>
                 <Box onClick={() => handleOpenModal(item)}>
                   <div>
-                    <img src={item.image} alt="product" />
+                    <img src={item.image} alt={item.title} />
                   </div>
                   <div>
                     <strong>{item.title}</strong>
