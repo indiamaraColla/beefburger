@@ -23,8 +23,9 @@ const BurgerProvider = ({ children }) => {
     setCartItems([...cardItems, product]);
   };
 
-  const removeCart = () => {
-    console.log('remove');
+  const removeCart = (id) => {
+    const items = cardItems.filter((item) => item.id !== id);
+    setCartItems(items);
   };
 
   const setListProducts = (key, list) => {

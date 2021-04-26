@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useBurger } from '../../store/BurgerStore';
 
@@ -22,7 +22,7 @@ import {
 } from './style';
 
 const FinalizandoFood = () => {
-  const { cardItems } = useBurger();
+  const { cardItems, removeCart } = useBurger();
   const [show, showModal] = useState(false);
   const [finalizar, showFinish] = useState(false);
 
@@ -38,9 +38,16 @@ const FinalizandoFood = () => {
     showModal(true);
   }
 
-  function onCloseOk() {
-    history.push('/home');
+  function onCloseOk(id) {
+    removeCart(id);
   }
+
+  useEffect(() => {
+    if (cardItems.length === 0) {
+      history.push('/home');
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cardItems]);
 
   return (
     <Menu>
@@ -51,14 +58,14 @@ const FinalizandoFood = () => {
           <h3>seu pedido</h3>
 
           <div>
-            {cardItems.map((data) => (
-              <BoxList>
+            {cardItems.map((data, index) => (
+              <BoxList key={index}>
                 <div>
                   <h4>{data.title} </h4>
                   <RemoverLixeira>
                     <span>{data.description}</span>
                     <div>
-                      <img src={Remover} onClick={onCloseOk} alt="remover" />
+                      <img src={Remover} onClick={() => onCloseOk(data.id)} alt="remover" />
                     </div>
                   </RemoverLixeira>
                 </div>
