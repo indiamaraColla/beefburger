@@ -10,12 +10,12 @@ import soup from '../../img/soup.png';
 import snack from '../../img/snack.png';
 import massas from '../../img/massas.png';
 
-import ListHamburger from '../ListHamburger';
-import ListPizza from '../ListPizza';
-import ListSoup from '../ListSoup';
-import ListPasta from '../ListPasta';
-import ListSnack from '../ListSnack';
-import Promotions from '../Promotions';
+import ListHamburger from '../ListProducts/ListHamburger';
+import ListPizza from '../ListProducts/ListPizza';
+import ListSoup from '../ListProducts/ListSoup';
+import ListPasta from '../ListProducts/ListPasta';
+import ListSnack from '../ListProducts/ListSnack';
+import Promotions from '../ListProducts/ListPromotions';
 
 function Home() {
   const { cart, setCart } = useCart();
