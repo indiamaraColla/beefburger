@@ -1,5 +1,5 @@
 import React from 'react';
-import { MainHeader, Container, Link } from './style';
+import { MainHeader, Container, List } from './style';
 
 import { FaFacebook, FaYoutube } from 'react-icons/fa';
 import { AiFillTwitterCircle } from 'react-icons/ai';
@@ -11,7 +11,7 @@ function Header() {
     <MainHeader>
       <Container>
         <TitleLogo />
-        <Link className="back-link" to="/register">
+        <List>
           <a href="https://pt-br.facebook.com/" target="blank">
             <FaFacebook size={24} color="#fff" />
           </a>
@@ -21,7 +21,7 @@ function Header() {
           <a href="https://www.youtube.com/?hl=pt&gl=BR" target="blank">
             <FaYoutube size={24} color="#fff" />
           </a>
-        </Link>
+        </List>
       </Container>
     </MainHeader>
   );

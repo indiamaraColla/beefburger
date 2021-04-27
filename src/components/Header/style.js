@@ -12,7 +12,7 @@ export const Container = styled.div`
   max-width: 820px;
   margin: 0 auto;
 `;
-export const Link = styled.ul`
+export const List = styled.ul`
   svg {
     margin-right: 10px;
   }
