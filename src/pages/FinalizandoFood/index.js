@@ -43,7 +43,7 @@ const FinalizandoFood = () => {
       history.push('/home');
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [cardItems]);
 
   return (
     <Menu>
