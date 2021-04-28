@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import api from '../../services/api';
-import BtnBlueDark from '../../components/Button/BtnDarkBlue';
 
-import { BoxDescription, BoxList, Box, ButtonAdd, CountButton } from './style';
+import BtnBlueDark from '../../components/Button/BtnDarkBlue';
+import Headline from '../../components/Typografy/Headline';
+import Subheading from '../../components/Typografy/Subheading';
+
+import { BoxDescription, BoxList, Box, ButtonAdd, CountButton, Description } from './style';
 import { useBurger } from '../../store/BurgerStore';
 
 const DescriptionFood = ({ type, id, product }) => {
@@ -33,22 +36,20 @@ const DescriptionFood = ({ type, id, product }) => {
   return (
     <BoxDescription>
       <BoxList>
-        <p>ticket</p>
+        <Headline text="ticket" primary />
         <Box>
-          <div>
-            <h4>{data.title} </h4>
-            <span>{data.description}</span>
-            <ButtonAdd>
-              <CountButton>
-                <button onClick={() => setCount(count - 1)}>-</button>
-                <div className="text">{count}</div>
-                <button onClick={() => setCount(count + 1)}>+</button>
-              </CountButton>
-              <h5>R$ {data.price * count},00</h5>
-            </ButtonAdd>
+          <Subheading text={data.title} secondary />
+          <Description>{data.description}</Description>
+          <ButtonAdd>
+            <CountButton>
+              <button onClick={() => setCount(count - 1)}>-</button>
+              <div className="text">{count}</div>
+              <button onClick={() => setCount(count + 1)}>+</button>
+            </CountButton>
+            <Subheading text={`R$ ${data.price * count},00`} secondary />
+          </ButtonAdd>
 
-            <BtnBlueDark onClick={handleClickComprar} text="põe no carinho" blueDark />
-          </div>
+          <BtnBlueDark onClick={handleClickComprar} text="põe no carinho" blueDark />
         </Box>
       </BoxList>
     </BoxDescription>

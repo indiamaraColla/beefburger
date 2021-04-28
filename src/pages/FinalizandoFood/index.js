@@ -5,6 +5,8 @@ import { useBurger } from '../../store/BurgerStore';
 import Modal from '../../components/Modal';
 import BtnBlueDark from '../../components/Button/BtnDarkBlue';
 import BtnOutline from '../../components/Button/BtnDarkBlue';
+import Headline from '../../components/Typografy/Headline';
+import Subheading from '../../components/Typografy/Subheading';
 
 import Remover from '../../img/trashCan.png';
 import BagFood from '../../img/bagFood.png';
@@ -55,13 +57,14 @@ const FinalizandoFood = () => {
         <BtnOutline onClick={handleClickBack} outline />
 
         <BoxDescription>
-          <h3>seu pedido</h3>
+          <Headline text="seu pedido" primary />
 
           <div>
             {cardItems.map((data, index) => (
               <BoxList key={index}>
                 <div>
-                  <h4>{data.title} </h4>
+                  <Subheading text={data.title} secondary />
+
                   <RemoverLixeira>
                     <span>{data.description}</span>
                     <div>
@@ -70,8 +73,8 @@ const FinalizandoFood = () => {
                   </RemoverLixeira>
                 </div>
                 <TotalPrice>
-                  <p>subtotal</p>
-                  <h5>R$ {data.price * data.count},00</h5>
+                  <p style={{ color: '#de080d' }}>subtotal</p>
+                  <Subheading text={`R$ ${data.price * data.count},00`} secondary />
                 </TotalPrice>
               </BoxList>
             ))}
@@ -84,11 +87,12 @@ const FinalizandoFood = () => {
 
         {finalizar && (
           <BoxDescription>
-            <h3>finalizando pedido</h3>
+            <Headline text="finalizando pedido" primary />
+
             <BoxList>
               <Box>
                 <div>
-                  <h4>endereço de retirada </h4>
+                  <Subheading text="endereço de retirada" secondary />
                   <Adress>
                     <img src={BagFood} alt="bagfood" />
                     <div>
@@ -100,8 +104,8 @@ const FinalizandoFood = () => {
                 </div>
               </Box>
               <TotalPrice>
-                <p>total</p>
-                <h5>R$ {total},00</h5>
+                <p style={{ color: '#de080d' }}>total</p>
+                <Subheading text={`R$ ${total},00`} secondary />
               </TotalPrice>
             </BoxList>
             <Button>
@@ -113,7 +117,7 @@ const FinalizandoFood = () => {
 
       <Modal onClose={() => showModal(false)} show={show} height="800px">
         <div className="modal" id="modal">
-          <h2>acabei</h2>
+          <Subheading text="acabei" />
           <div className="content">pedido finalizado com sucesso...</div>
           <div className="actions">
             <button className="toggle-button" onClick={onCloseOk}>

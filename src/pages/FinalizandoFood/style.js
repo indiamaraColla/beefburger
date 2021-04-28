@@ -12,15 +12,6 @@ export const BoxDescription = styled.div`
   padding: 30px;
   margin: 30px 0;
   border-radius: 18px;
-
-  h3 {
-    border-bottom: 2px solid #ccc;
-    padding: 6px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
 `;
 
 export const BoxList = styled.div`
@@ -31,16 +22,11 @@ export const BoxList = styled.div`
   grid-template-rows: 1fr auto 0;
   border-bottom: 1px solid #ccc;
 
-  h4,
-  p {
-    color: #de080d;
-  }
   span {
     font-size: 14px;
   }
 `;
 export const Box = styled.div`
-  margin-bottom: 20px;
   display: flex;
   flex: 1;
 `;
@@ -54,11 +40,7 @@ export const RemoverLixeira = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 20px 0;
 
-  h5 {
-    margin: 0 10px;
-  }
   img {
     height: 20px;
     margin-left: 10px;
@@ -69,9 +51,6 @@ export const Adress = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 20px 0;
-  p {
-    color: #000;
-  }
 
   img {
     height: 60px;

@@ -1,16 +1,15 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Menu = styled.div`
-  padding: 20px; 
+  padding: 20px;
 `;
 export const MenuDescription = styled.div`
   max-width: 820px;
   margin: 0 auto;
-  height: 370px;
+  min-height: 370px;
 `;
 export const BoxDescription = styled.div`
-  background: #Fff;
-  padding:30px;
+  background: #fff;
   border-radius: 18px;
   max-width: 800px;
 `;
@@ -22,15 +21,11 @@ export const BoxList = styled.div`
   align-items: center;
   grid-template-columns: 1fr;
 
-  h4{
-    color: #DE080D;
-    margin: 6px 0;
-  }
-  p{
+  p {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #193B4B;
+    color: #193b4b;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -41,15 +36,8 @@ export const BoxList = styled.div`
 export const Box = styled.div`
   display: grid;
   align-items: center;
-  h5 {
-    margin: 4px 0;
-    color: #DE080D;
-    margin: 6px 0;
-  }
-  p {
-    margin: 10px 0;
-  }
-  span{
+
+  span {
     font-size: 14px;
     margin: 6px 0;
   }
@@ -66,12 +54,12 @@ export const ButtonAdd = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 10px 0;
-  
+
   button {
     display: inline-block;
     width: 28px;
     font-size: 16px;
-    border:1px solid #DE080D;
+    border: 1px solid #de080d;
   }
   .text {
     padding: 8px;
@@ -79,9 +67,10 @@ export const ButtonAdd = styled.div`
 `;
 export const CountButton = styled.div`
   display: flex;
-  
+
   button {
     background: #fff;
     border-radius: 8px;
   }
 `;
+export const Description = styled.div``;
