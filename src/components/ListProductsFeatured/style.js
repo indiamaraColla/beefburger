@@ -1,15 +1,5 @@
 import styled from 'styled-components';
 
-export const BoxFeatured = styled.div`
-  background: #193b4b;
-  border-radius: 20px;
-  margin-bottom: 20px;
-`;
-
-export const BoxFeaturedNot = styled.div`
-  color: red;
-`;
-
 export const BoxList = styled.div`
   background: #fff;
   border-radius: 16px;

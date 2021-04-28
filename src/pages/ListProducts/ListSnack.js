@@ -1,11 +1,11 @@
 import React from 'react';
-import { BoxFeatured } from './style.js';
+import { BoxFeaturedNot } from './style.js';
 
 const ListSnack = () => {
   return (
-    <BoxFeatured>
+    <BoxFeaturedNot>
       <h3>escolha outro pedido.... opção indisponivel no momento :)</h3>
-    </BoxFeatured>
+    </BoxFeaturedNot>
   );
 };
 export default ListSnack;
