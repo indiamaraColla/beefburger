@@ -8,6 +8,8 @@ import signinService from '../../services/signinService';
 
 import ButtonRegister from '../../components/Button/BtnDarkRed';
 import BtnOutline from '../../components/Button/BtnDarkBlue';
+import Headline from '../../components/Typografy/Headline';
+
 import { useAuth } from '../../store/AuthStore';
 
 const initialValues = {
@@ -61,7 +63,8 @@ const SignIn = () => {
         <Formik validateOnMount validationSchema={SignupSchema} onSubmit={onSubmit} initialValues={initialValues}>
           {({ errors, touched, isValid }) => (
             <Form className="form">
-              <h2>Já sou cliente</h2>
+              <Headline text="Já sou cliente" style={{ marginBottom: '16' }} />
+
               <Field className="inputForm" placeholder="E-mail" name="email" autoComplete="email" />
               {errors.email && touched.email && <ErrorMessage component="span" name="email" />}
 

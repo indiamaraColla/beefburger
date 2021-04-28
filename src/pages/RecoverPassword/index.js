@@ -9,6 +9,7 @@ import { DataRegister, CostumerRegistration } from './style';
 
 import ButtonRegister from '../../components/Button/BtnDarkRed';
 import BtnOutline from '../../components/Button/BtnDarkBlue';
+import Headline from '../../components/Typografy/Headline';
 
 const initialValues = {
   email: '',
@@ -35,6 +36,7 @@ const SignUp = () => {
       toast.error('Erro ao logar, tente novamente!');
     }
   };
+
   return (
     <DataRegister>
       <CostumerRegistration>
@@ -43,7 +45,7 @@ const SignUp = () => {
         <Formik validateOnMount validationSchema={SignupSchema} onSubmit={onSubmit} initialValues={initialValues}>
           {({ errors, touched, isValid }) => (
             <Form className="form">
-              <h2>Digite seu email</h2>
+              <Headline text="Digite seu email" />
 
               <Field className="inputForm" placeholder="E-mail" name="email" autoComplete="email" />
               {errors.email && touched.email && <ErrorMessage component="span" name="email" />}

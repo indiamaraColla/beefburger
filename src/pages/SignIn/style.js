@@ -11,17 +11,13 @@ export const DataRegister = styled.div`
   display: flex;
   flex-direction: column;
   padding: 16px;
-  h2 {
-    font-weight: bold;
-    font-size: 18px;
-    color: #000;
-    margin-bottom: 12px;
-  }
 
   .form {
-    border-bottom: 1px solid #de080d;
     padding-bottom: 30px;
     margin-top: 20px;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 16px;
 
     .inputForm {
       margin: 12px 0;

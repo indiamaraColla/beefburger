@@ -5,10 +5,12 @@ import * as Yup from 'yup';
 import { toast } from 'react-toastify';
 import { useAuth } from '../../store/AuthStore';
 
-import { DataRegister, CostumerRegistration } from './style';
+import { CostumerRegistration } from './style';
 
 import ButtonRegister from '../../components/Button/BtnDarkRed';
 import BtnOutline from '../../components/Button/BtnDarkBlue';
+import Headline from '../../components/Typografy/Headline';
+
 import signupService from '../../services/signupService';
 import signinService from '../../services/signinService';
 
@@ -55,49 +57,47 @@ const SignUp = () => {
     }
   };
   return (
-    <DataRegister>
-      <CostumerRegistration>
-        <BtnOutline onClick={handleClickBack} outline />
+    <CostumerRegistration>
+      <BtnOutline onClick={handleClickBack} outline />
 
-        <Formik validateOnMount validationSchema={SignupSchema} onSubmit={onSubmit} initialValues={initialValues}>
-          {({ errors, touched, isValid }) => (
-            <Form className="form">
-              <h2>Criar cadastro</h2>
+      <Formik validateOnMount validationSchema={SignupSchema} onSubmit={onSubmit} initialValues={initialValues}>
+        {({ errors, touched, isValid }) => (
+          <Form className="form">
+            <Headline text="Criar cadastro" style={{ marginBottom: '16' }} />
 
-              <Field className="inputForm" placeholder="Nome Completo" name="name" autoComplete="username" />
-              {errors.name && touched.name && <ErrorMessage component="span" name="name" />}
+            <Field className="inputForm" placeholder="Nome Completo" name="name" autoComplete="username" />
+            {errors.name && touched.name && <ErrorMessage component="span" name="name" />}
 
-              <Field className="inputForm" placeholder="E-mail" name="email" autoComplete="email" />
-              {errors.email && touched.email && <ErrorMessage component="span" name="email" />}
+            <Field className="inputForm" placeholder="E-mail" name="email" autoComplete="email" />
+            {errors.email && touched.email && <ErrorMessage component="span" name="email" />}
 
-              <Field
-                className="inputForm"
-                type="password"
-                placeholder="Senha"
-                name="password"
-                autoComplete="current-password"
-              />
-              {errors.password && touched.password && <ErrorMessage component="span" name="password" />}
+            <Field
+              className="inputForm"
+              type="password"
+              placeholder="Senha"
+              name="password"
+              autoComplete="current-password"
+            />
+            {errors.password && touched.password && <ErrorMessage component="span" name="password" />}
 
-              <Field
-                className="inputForm"
-                type="password"
-                placeholder="Confirme sua senha"
-                name="confirmPassword"
-                autoComplete="new-password"
-              />
-              {errors.confirmPassword && touched.confirmPassword && (
-                <ErrorMessage component="span" name="confirmPassword" />
-              )}
+            <Field
+              className="inputForm"
+              type="password"
+              placeholder="Confirme sua senha"
+              name="confirmPassword"
+              autoComplete="new-password"
+            />
+            {errors.confirmPassword && touched.confirmPassword && (
+              <ErrorMessage component="span" name="confirmPassword" />
+            )}
 
-              <ButtonRegister type="submit" disabled={!isValid}>
-                Continuar
-              </ButtonRegister>
-            </Form>
-          )}
-        </Formik>
-      </CostumerRegistration>
-    </DataRegister>
+            <ButtonRegister type="submit" disabled={!isValid}>
+              Continuar
+            </ButtonRegister>
+          </Form>
+        )}
+      </Formik>
+    </CostumerRegistration>
   );
 };
 export default SignUp;
