@@ -38,6 +38,7 @@ const BurgerProvider = ({ children }) => {
     addCart,
     removeCart,
     products,
+    setCartItems,
     setProducts: setListProducts,
   };
 
