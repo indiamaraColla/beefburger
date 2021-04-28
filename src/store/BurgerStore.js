@@ -6,6 +6,7 @@ const initialState = {
     burger: [],
     pizza: [],
     soup: [],
+    promotions: [],
   },
 };
 
