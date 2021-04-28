@@ -2,27 +2,17 @@ import styled from 'styled-components';
 
 export const Menu = styled.div`
   padding: 20px;
-`;
-export const Container = styled.div`
   max-width: 820px;
   margin: 0 auto;
 `;
-export const DataMenu = styled.div`
-  margin: 20px;
 
-  h3 {
-    font-size: 18px;
-    padding-bottom: 6px;
-    font-weight: bold;
-    color: #d41515;
-  }
-`;
 export const DataList = styled.div`
   border-radius: 10px;
   height: 100%;
   color: #193b4b;
   background: #fff;
   padding: 16px;
+  margin: 20px 0;
 
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -36,6 +26,7 @@ export const DataList = styled.div`
     padding: 20px;
   }
 `;
+
 export const Box = styled.div`
   display: flex;
   align-items: center;
@@ -59,7 +50,6 @@ export const Box = styled.div`
     height: 30px;
   }
 `;
-export const BoxFeatured = styled.div``;
 
 export const Footer = styled.div`
   background: #193b4b;

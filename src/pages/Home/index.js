@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-import { Menu, Container, DataMenu, DataList, Box, BoxFeatured, Footer } from './style';
-
 import { useCart } from '../../store/CartStore';
 
 import burger from '../../img/hamburger.png';
@@ -16,6 +14,11 @@ import ListSoup from '../ListProducts/ListSoup';
 import ListPasta from '../ListProducts/ListPasta';
 import ListSnack from '../ListProducts/ListSnack';
 import Promotions from '../ListProducts/ListPromotions';
+
+import Headline from '../../components/Typografy/Headline';
+import Image from '../../components/Image';
+
+import { Menu, DataList, Box, Footer } from './style';
 
 function Home() {
   const { cart, setCart } = useCart();
@@ -32,56 +35,48 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <>
       <Menu>
-        <Container>
-          <div>
-            <DataMenu>
-              <h3>o que vc deseja pra hoje?</h3>
-              <DataList>
-                <Box className={menu === 'burger' && 'active'} onClick={() => onHandleMenu('burger')}>
-                  <div>
-                    <img src={burger} alt="burger" />
-                  </div>
-                  <div>
-                    <p>Burger</p>
-                  </div>
-                </Box>
-                <Box className={menu === 'pizza' && 'active'} onClick={() => onHandleMenu('pizza')}>
-                  <img src={pizza} alt="pizza" />
-                  <p>Pizza</p>
-                </Box>
-                <Box className={menu === 'massas' && 'active'} onClick={() => onHandleMenu('massas')}>
-                  <img src={massas} alt="massas" />
-                  <p>Massas</p>
-                </Box>
-                <Box className={menu === 'soup' && 'active'} onClick={() => onHandleMenu('soup')}>
-                  <img src={soup} alt="soup" />
-                  <p>Soup</p>
-                </Box>
-                <Box className={menu === 'snack' && 'active'} onClick={() => onHandleMenu('snack')}>
-                  <img src={snack} alt="snack" />
-                  <p>Lanches</p>
-                </Box>
-              </DataList>
-            </DataMenu>
+        <Headline text="o que vc deseja pra hoje?" />
+        <DataList>
+          <Box className={menu === 'burger' && 'active'} onClick={() => onHandleMenu('burger')}>
+            <div>
+              <Image src={burger} alt="burger" />
+            </div>
+            <div>
+              <p>Burger</p>
+            </div>
+          </Box>
+          <Box className={menu === 'pizza' && 'active'} onClick={() => onHandleMenu('pizza')}>
+            <Image src={pizza} alt="pizza" />
+            <p>Pizza</p>
+          </Box>
+          <Box className={menu === 'massas' && 'active'} onClick={() => onHandleMenu('massas')}>
+            <Image src={massas} alt="massas" />
+            <p>Massas</p>
+          </Box>
+          <Box className={menu === 'soup' && 'active'} onClick={() => onHandleMenu('soup')}>
+            <Image src={soup} alt="soup" />
+            <p>Soup</p>
+          </Box>
+          <Box className={menu === 'snack' && 'active'} onClick={() => onHandleMenu('snack')}>
+            <Image src={snack} alt="snack" />
+            <p>Lanches</p>
+          </Box>
+        </DataList>
 
-            <Promotions />
+        <Promotions />
 
-            <BoxFeatured>
-              {menu === 'burger' && <ListHamburger />}
-              {menu === 'massas' && <ListPasta />}
-              {menu === 'pizza' && <ListPizza />}
-              {menu === 'soup' && <ListSoup />}
-              {menu === 'snack' && <ListSnack />}
-            </BoxFeatured>
-          </div>
-        </Container>
+        {menu === 'burger' && <ListHamburger />}
+        {menu === 'massas' && <ListPasta />}
+        {menu === 'pizza' && <ListPizza />}
+        {menu === 'soup' && <ListSoup />}
+        {menu === 'snack' && <ListSnack />}
       </Menu>
       <Footer>
         <p>Copyright © 2020 - Beef Burger. Todos os direitos reservados.</p>
       </Footer>
-    </div>
+    </>
   );
 }
 export default Home;
