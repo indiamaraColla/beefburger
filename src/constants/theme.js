@@ -1,5 +1,13 @@
 const theme = {
-  primary: 'red',
+  darkRed: '#d41515',
+  darkBlue: '#193b4b',
+  white: '#fff',
+
+  faintGray: '#F2F2F2',
+  lightGray: '#ccc',
+
+  success: '#4caf50',
+  error: '#d32f2f',
 };
 
 export default theme;
