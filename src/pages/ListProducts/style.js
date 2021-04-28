@@ -37,7 +37,6 @@ export const Menu = styled.div`
   line-height: 1.4;
   padding: 10px 0;
   margin: 10px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 
   button {
     border: none;
@@ -54,6 +53,7 @@ export const Menu = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 
     button {
       padding: 8px 0;
