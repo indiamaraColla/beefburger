@@ -1,23 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import { Card } from "./style";
+import { Container } from './style';
 
-
-export default class Modal extends React.Component {
-  render() {
-    if (!this.props.show) {
-      return null;
-    }
-    return (
-      <Card>
-        {this.props.children}
-      </Card>
-    );
+const Modal = (props) => {
+  if (!props.show) {
+    return null;
   }
-}
+  return <Container>{props.children}</Container>;
+};
 
-
-
-
-
-
+export default Modal;
