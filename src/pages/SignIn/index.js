@@ -28,22 +28,22 @@ const SignupSchema = Yup.object().shape({
 const SignIn = () => {
   const { setUser } = useAuth();
 
-  let history = useHistory();
+  const history = useHistory();
 
-  function handleClickBack(e) {
+  const handleClickBack = (e) => {
     e.preventDefault();
     history.push('/');
-  }
+  };
 
-  function handleClickRegister(e) {
+  const handleClickRegister = (e) => {
     e.preventDefault();
     history.push('/signup');
-  }
+  };
 
-  function handleRecoverPassword(e) {
+  const handleRecoverPassword = (e) => {
     e.preventDefault();
     history.push('/newpassword');
-  }
+  };
 
   const onSubmit = async (values) => {
     try {

@@ -21,10 +21,10 @@ const ListProducts = ({ type, service }) => {
     setProducts(type, response.data[type].result);
   };
 
-  function handleClickModal(item) {
+  const handleClickModal = (item) => {
     showModal(true);
     setProduct({ id: item.id, type, item });
-  }
+  };
 
   useEffect(() => {
     loadList();

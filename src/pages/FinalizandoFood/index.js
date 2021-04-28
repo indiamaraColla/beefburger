@@ -32,17 +32,17 @@ const FinalizandoFood = () => {
 
   const history = useHistory();
 
-  function handleClickBack() {
+  const handleClickBack = () => {
     history.push('/home');
-  }
+  };
 
-  function handleClickFinish() {
+  const handleClickFinish = () => {
     showModal(true);
-  }
+  };
 
-  function onCloseOk(id) {
+  const onCloseOk = (id) => {
     removeCart(id);
-  }
+  };
 
   useEffect(() => {
     if (cardItems.length === 0) {

@@ -20,7 +20,7 @@ import Image from '../../components/Image';
 
 import { Menu, DataList, Box, Footer } from './style';
 
-function Home() {
+const Home = () => {
   const { cart, setCart } = useCart();
   const [menu, setMenu] = useState('burger');
   const onHandleMenu = (menu) => {
@@ -78,5 +78,5 @@ function Home() {
       </Footer>
     </>
   );
-}
+};
 export default Home;

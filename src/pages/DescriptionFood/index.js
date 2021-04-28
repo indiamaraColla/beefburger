@@ -9,13 +9,13 @@ const DescriptionFood = (props) => {
   const history = useHistory();
   let { type, id } = useParams();
 
-  function handleClickVoltar() {
+  const handleClickVoltar = () => {
     if (props.onHandler) {
       props.onHandler();
     } else {
       history.goBack();
     }
-  }
+  };
 
   if (!type && !id) {
     id = props.id;

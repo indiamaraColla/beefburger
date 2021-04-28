@@ -4,13 +4,13 @@ import AppStore from './store/index';
 
 import Routes from './routes';
 
-function App() {
+const App = () => {
   return (
     <AppStore>
       <GlobalStyle />
       <Routes />
     </AppStore>
   );
-}
+};
 
 export default App;

@@ -20,11 +20,11 @@ const DescriptionFood = ({ type, id, product }) => {
     setData(response.data);
   };
 
-  function handleClickComprar() {
+  const handleClickComprar = () => {
     addCart({ ...product, count });
 
     history.push(`/product/${type}/${id}/finish?count=${count}`);
-  }
+  };
 
   useEffect(() => {
     if (type && id) {

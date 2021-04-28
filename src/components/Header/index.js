@@ -6,7 +6,7 @@ import { AiFillTwitterCircle } from 'react-icons/ai';
 
 import TitleLogo from '../TitleLogo';
 
-function Header() {
+const Header = () => {
   return (
     <Container>
       <Content>
@@ -25,5 +25,5 @@ function Header() {
       </Content>
     </Container>
   );
-}
+};
 export default Header;

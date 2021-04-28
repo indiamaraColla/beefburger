@@ -24,10 +24,10 @@ const ListPizza = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  function handleOpenModal(item) {
+  const handleOpenModal = (item) => {
     showModal(true);
     setProduct({ id: item.id, type: 'promotions', item });
-  }
+  };
 
   return (
     <BoxFeatured>

@@ -13,7 +13,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import Header from './components/Header';
 import 'react-toastify/dist/ReactToastify.css';
 
-export default function Routes() {
+const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
@@ -35,4 +35,6 @@ export default function Routes() {
       <ToastContainer position={toast.POSITION.BOTTOM_RIGHT} />
     </BrowserRouter>
   );
-}
+};
+
+export default Routes;
