@@ -3,16 +3,13 @@ import { useHistory } from 'react-router-dom';
 import { useBurger } from '../../store/BurgerStore';
 
 import Modal from '../../components/Modal';
-import BtnBlueDark from '../../components/Button/BtnDarkBlue';
 import BtnOutline from '../../components/Button/BtnDarkBlue';
-import Headline from '../../components/Typografy/Headline';
 import Subheading from '../../components/Typografy/Subheading';
 
 import CheckOrder from '../../components/OrderFinish/checkOrder';
+import FinishOrder from '../../components/OrderFinish/finishOrder';
 
-import BagFood from '../../img/bagFood.png';
-
-import { Menu, MenuDescription, BoxDescription, BoxList, Box, Adress, Button, TotalPrice } from './style';
+import { Menu, MenuDescription } from './style';
 
 const FinalizandoFood = () => {
   const { cardItems, removeCart } = useBurger();
@@ -49,33 +46,13 @@ const FinalizandoFood = () => {
 
         <CheckOrder onCloseOk={onCloseOk} cardItems={cardItems} showFinish={showFinish} />
 
-        {finalizar && (
-          <BoxDescription>
-            <Headline text="finalizando pedido" primary />
-
-            <BoxList>
-              <Box>
-                <div>
-                  <Subheading text="endereço de retirada" secondary />
-                  <Adress>
-                    <img src={BagFood} alt="bagfood" />
-                    <div>
-                      <p>Rua São Cristolvon 950 Centro - Blumenau</p>
-                      <p> (47) 9924-4329</p>
-                      <p> 30-40 minutos</p>
-                    </div>
-                  </Adress>
-                </div>
-              </Box>
-              <TotalPrice>
-                <p style={{ color: '#de080d' }}>total</p>
-                <Subheading text={`R$ ${total},00`} secondary />
-              </TotalPrice>
-            </BoxList>
-            <Button>
-              <BtnBlueDark onClick={handleClickFinish} blueDark text="pronto" />
-            </Button>
-          </BoxDescription>
+        {cardItems.length >= 1 && (
+          <FinishOrder
+            cardItems={cardItems}
+            total={total}
+            handleClickFinish={handleClickFinish}
+            finalizar={finalizar}
+          />
         )}
       </MenuDescription>
 
