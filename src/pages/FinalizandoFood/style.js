@@ -3,68 +3,16 @@ import styled from 'styled-components';
 export const Menu = styled.div`
   padding: 20px;
 `;
+
 export const MenuDescription = styled.div`
   max-width: 820px;
   margin: 0 auto;
 `;
-export const BoxDescription = styled.div`
-  background: #fff;
-  padding: 30px;
-  margin: 30px 0;
+
+export const ContainerModal = styled.div`
+  width: 500px;
+  background: white;
   border-radius: 18px;
-`;
-
-export const BoxList = styled.div`
-  margin: 8px 0;
-  line-height: 1.4;
-  display: grid;
-  align-items: center;
-  grid-template-rows: 1fr auto 0;
-  border-bottom: 1px solid #ccc;
-
-  span {
-    font-size: 14px;
-  }
-`;
-export const Box = styled.div`
-  display: flex;
-  flex: 1;
-`;
-export const TotalPrice = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 20px 0;
-`;
-export const RemoverLixeira = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  img {
-    height: 20px;
-    margin-left: 10px;
-  }
-`;
-export const Adress = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 20px 0;
-
-  img {
-    height: 60px;
-    margin-right: 20px;
-  }
-`;
-export const Button = styled.div`
-  font-size: 16px;
-  display: block;
-
-  .hidden {
-    display: none;
-  }
-`;
-export const ContentModal = styled.div`
-  height: calc(100vh - 6px);
+  box-shadow: 2rem 2rem rgba(black, 0.2);
+  padding: 16px;
 `;

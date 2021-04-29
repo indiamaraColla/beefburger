@@ -5,6 +5,7 @@ import { useBurger } from '../../store/BurgerStore';
 import Modal from '../../components/Modal';
 import BtnOutline from '../../components/Button/BtnDarkBlue';
 import Subheading from '../../components/Typografy/Subheading';
+import BtnBlueDark from '../../components/Button/BtnDarkBlue';
 
 import CheckOrder from '../../components/OrderFinish/checkOrder';
 import FinishOrder from '../../components/OrderFinish/finishOrder';
@@ -12,7 +13,7 @@ import FinishOrder from '../../components/OrderFinish/finishOrder';
 import { Menu, MenuDescription } from './style';
 
 const FinalizandoFood = () => {
-  const { cardItems, removeCart } = useBurger();
+  const { cardItems, removeCart, setCartItems } = useBurger();
   const [show, showModal] = useState(false);
   const [finalizar, showFinish] = useState(false);
 
@@ -30,6 +31,11 @@ const FinalizandoFood = () => {
 
   const onCloseOk = (id) => {
     removeCart(id);
+  };
+
+  const onFinishOrder = () => {
+    setCartItems('');
+    history.push('/home');
   };
 
   useEffect(() => {
@@ -61,9 +67,7 @@ const FinalizandoFood = () => {
           <Subheading text="acabei" />
           <div className="content">pedido finalizado com sucesso...</div>
           <div className="actions">
-            <button className="toggle-button" onClick={onCloseOk}>
-              OK
-            </button>
+            <BtnBlueDark onClick={onFinishOrder} text="OK" blueDark />
           </div>
         </div>
       </Modal>
