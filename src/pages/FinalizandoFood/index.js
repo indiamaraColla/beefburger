@@ -8,20 +8,11 @@ import BtnOutline from '../../components/Button/BtnDarkBlue';
 import Headline from '../../components/Typografy/Headline';
 import Subheading from '../../components/Typografy/Subheading';
 
-import Remover from '../../img/trashCan.png';
+import CheckOrder from '../../components/OrderFinish/checkOrder';
+
 import BagFood from '../../img/bagFood.png';
 
-import {
-  Menu,
-  MenuDescription,
-  BoxDescription,
-  BoxList,
-  Box,
-  RemoverLixeira,
-  Adress,
-  Button,
-  TotalPrice,
-} from './style';
+import { Menu, MenuDescription, BoxDescription, BoxList, Box, Adress, Button, TotalPrice } from './style';
 
 const FinalizandoFood = () => {
   const { cardItems, removeCart } = useBurger();
@@ -56,34 +47,7 @@ const FinalizandoFood = () => {
       <MenuDescription>
         <BtnOutline onClick={handleClickBack} outline />
 
-        <BoxDescription>
-          <Headline text="seu pedido" primary />
-
-          <div>
-            {cardItems.map((data, index) => (
-              <BoxList key={index}>
-                <div>
-                  <Subheading text={data.title} secondary />
-
-                  <RemoverLixeira>
-                    <span>{data.description}</span>
-                    <div>
-                      <img src={Remover} onClick={() => onCloseOk(data.id)} alt="remover" />
-                    </div>
-                  </RemoverLixeira>
-                </div>
-                <TotalPrice>
-                  <p style={{ color: '#de080d' }}>subtotal</p>
-                  <Subheading text={`R$ ${data.price * data.count},00`} secondary />
-                </TotalPrice>
-              </BoxList>
-            ))}
-          </div>
-
-          <Button className="hidden">
-            <BtnBlueDark onClick={() => showFinish(true)} text="acabei" blueDark />
-          </Button>
-        </BoxDescription>
+        <CheckOrder onCloseOk={onCloseOk} cardItems={cardItems} showFinish={showFinish} />
 
         {finalizar && (
           <BoxDescription>
