@@ -6,7 +6,17 @@ import BtnBlueDark from '../../components/Button/BtnDarkBlue';
 import Headline from '../../components/Typografy/Headline';
 import Subheading from '../../components/Typografy/Subheading';
 
-import { BoxDescription, BoxList, Box, ButtonAdd, CountButton, Description } from './style';
+import {
+  BoxModal,
+  ContentModal,
+  ButtonAdd,
+  BoxQuantity,
+  BoxQuantityProduct,
+  Description,
+  ButtonLess,
+  ButtonMore,
+  QuantityProduct,
+} from './style';
 import { useBurger } from '../../store/BurgerStore';
 
 const DescriptionFood = ({ type, id, product }) => {
@@ -34,25 +44,23 @@ const DescriptionFood = ({ type, id, product }) => {
   }, [type, id]);
 
   return (
-    <BoxDescription>
-      <BoxList>
-        <Headline text="ticket" primary />
-        <Box>
-          <Subheading text={data.title} secondary />
-          <Description>{data.description}</Description>
-          <ButtonAdd>
-            <CountButton>
-              <button onClick={() => setCount(count - 1)}>-</button>
-              <div className="text">{count}</div>
-              <button onClick={() => setCount(count + 1)}>+</button>
-            </CountButton>
-            <Subheading text={`R$ ${data.price * count},00`} secondary />
-          </ButtonAdd>
+    <BoxModal>
+      <Headline text="ticket" primary />
+      <ContentModal>
+        <Subheading text={data.title} secondary />
+        <Description>{data.description}</Description>
+        <BoxQuantity>
+          <BoxQuantityProduct>
+            <ButtonLess onClick={() => setCount(count - 1)}>-</ButtonLess>
+            <QuantityProduct className="text">{count}</QuantityProduct>
+            <ButtonMore onClick={() => setCount(count + 1)}>+</ButtonMore>
+          </BoxQuantityProduct>
+          <Subheading text={`R$ ${data.price * count},00`} secondary />
+        </BoxQuantity>
 
-          <BtnBlueDark onClick={handleClickComprar} text="põe no carinho" blueDark />
-        </Box>
-      </BoxList>
-    </BoxDescription>
+        <BtnBlueDark onClick={handleClickComprar} text="põe no carinho" blueDark />
+      </ContentModal>
+    </BoxModal>
   );
 };
 export default DescriptionFood;

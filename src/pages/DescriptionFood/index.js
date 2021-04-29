@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 
 import BoxContent from './content';
-import { Menu, MenuDescription } from './style';
+import { ContainerModal } from './style';
 import BtnOutline from '../../components/Button/BtnDarkBlue';
 
 const DescriptionFood = (props) => {
@@ -23,12 +23,10 @@ const DescriptionFood = (props) => {
   }
 
   return (
-    <Menu>
-      <MenuDescription>
-        <BtnOutline onClick={handleClickVoltar} outline />
-        <BoxContent type={type} id={id} product={props.product.item} />
-      </MenuDescription>
-    </Menu>
+    <ContainerModal>
+      <BtnOutline onClick={handleClickVoltar} outline />
+      <BoxContent type={type} id={id} product={props.product.item} />
+    </ContainerModal>
   );
 };
 export default DescriptionFood;
