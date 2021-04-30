@@ -1,26 +1,20 @@
 import styled from 'styled-components';
 
-export const Menu = styled.div`
+export const ContainerModal = styled.div`
   padding: 20px;
-`;
-export const MenuDescription = styled.div`
-  max-width: 820px;
-  margin: 0 auto;
-  min-height: 370px;
-`;
-export const BoxDescription = styled.div`
   background: #fff;
   border-radius: 18px;
-  max-width: 800px;
+  width: 600px;
 `;
 
-export const BoxList = styled.div`
+export const BoxModal = styled.div`
   margin: 8px 0;
   line-height: 1.4;
   display: grid;
   align-items: center;
   grid-template-columns: 1fr;
 `;
+
 export const Box = styled.div`
   display: grid;
   align-items: center;

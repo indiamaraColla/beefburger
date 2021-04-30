@@ -7,8 +7,7 @@ import Headline from '../../components/Typografy/Headline';
 import Subheading from '../../components/Typografy/Subheading';
 
 import {
-  BoxDescription,
-  BoxList,
+  BoxModal,
   Box,
   Description,
   ButtonLess,
@@ -44,25 +43,23 @@ const DescriptionFood = ({ type, id, product }) => {
   }, [type, id]);
 
   return (
-    <BoxDescription>
-      <BoxList>
-        <Headline text="ticket" primary />
-        <Box>
-          <Subheading text={data.title} secondary />
-          <Description>{data.description}</Description>
-          <BoxQuantity>
-            <BoxQuantityProduct>
-              <ButtonLess onClick={() => setCount(count - 1)}>-</ButtonLess>
-              <QuantityProduct>{count}</QuantityProduct>
-              <ButtonMore onClick={() => setCount(count + 1)}>+</ButtonMore>
-            </BoxQuantityProduct>
-            <Subheading text={`R$ ${data.price * count},00`} secondary />
-          </BoxQuantity>
+    <BoxModal>
+      <Headline text="ticket" primary />
+      <Box>
+        <Subheading text={data.title} secondary />
+        <Description>{data.description}</Description>
+        <BoxQuantity>
+          <BoxQuantityProduct>
+            <ButtonLess onClick={() => setCount(count - 1)}>-</ButtonLess>
+            <QuantityProduct>{count}</QuantityProduct>
+            <ButtonMore onClick={() => setCount(count + 1)}>+</ButtonMore>
+          </BoxQuantityProduct>
+          <Subheading text={`R$ ${data.price * count},00`} secondary />
+        </BoxQuantity>
 
-          <BtnBlueDark onClick={handleClickComprar} text="põe no carinho" blueDark />
-        </Box>
-      </BoxList>
-    </BoxDescription>
+        <BtnBlueDark onClick={handleClickComprar} text="põe no carinho" blueDark />
+      </Box>
+    </BoxModal>
   );
 };
 export default DescriptionFood;
