@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const HeadlineText = styled.h1`
+  font-size: 28px;
   font-weight: bold;
   color: #193b4b;
   margin-bottom: 18px;
