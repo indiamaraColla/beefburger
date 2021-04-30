@@ -6,9 +6,9 @@ import DescriptionFood from '../DescriptionFood';
 import SubheadingText from '../../components/Typografy/Subheading';
 import Image from '../../components/Image';
 
-import { BoxFeatured, BoxListPromotions, Menu, BoxData, Description } from './style.js';
+import { BoxFeatured, BoxListPromotions, Menu, Description } from './style.js';
 
-const ListPizza = () => {
+const ListPromotions = () => {
   const [list, setList] = useState([]);
 
   const [show, showModal] = useState(false);
@@ -35,16 +35,14 @@ const ListPizza = () => {
       <BoxListPromotions>
         {list.map((item, index) => {
           return (
-            <Menu key={index}>
-              <BoxData onClick={() => handleOpenModal(item)}>
-                <Image src={item.image} alt={item.title} />
+            <Menu key={index} onClick={() => handleOpenModal(item)}>
+              <Image src={item.image} alt={item.title} />
 
-                <div>
-                  <SubheadingText text={item.title} primary />
-                  <Description>{item.description}</Description>
-                  <SubheadingText text={`R$ ${item.price},00`} primary />
-                </div>
-              </BoxData>
+              <div>
+                <SubheadingText text={item.title} primary />
+                <Description>{item.description}</Description>
+                <SubheadingText text={`R$ ${item.price},00`} primary />
+              </div>
             </Menu>
           );
         })}
@@ -58,4 +56,4 @@ const ListPizza = () => {
     </BoxFeatured>
   );
 };
-export default ListPizza;
+export default ListPromotions;
