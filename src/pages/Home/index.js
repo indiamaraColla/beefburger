@@ -16,7 +16,7 @@ import ListSnack from '../ListProducts/ListSnack';
 import Promotions from '../ListProducts/ListPromotions';
 
 import Headline from '../../components/Typografy/Headline';
-import Image from '../../components/Image';
+import Image from '../../components/ImageIcon';
 
 import { Menu, DataList, Box, Footer } from './style';
 
@@ -40,12 +40,8 @@ const Home = () => {
         <Headline text="o que vc deseja pra hoje?" />
         <DataList>
           <Box className={menu === 'burger' && 'active'} onClick={() => onHandleMenu('burger')}>
-            <div>
-              <Image src={burger} alt="burger" />
-            </div>
-            <div>
-              <p>Burger</p>
-            </div>
+            <Image src={burger} alt="burger" />
+            <p>Burger</p>
           </Box>
           <Box className={menu === 'pizza' && 'active'} onClick={() => onHandleMenu('pizza')}>
             <Image src={pizza} alt="pizza" />

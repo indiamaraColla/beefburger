@@ -43,12 +43,6 @@ export const Box = styled.div`
       color: #fff;
     }
   }
-  p {
-    padding-top: 6px;
-  }
-  img {
-    height: 30px;
-  }
 `;
 
 export const Footer = styled.div`
