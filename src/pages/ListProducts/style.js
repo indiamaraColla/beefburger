@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import theme from '../../constants/theme';
 
 export const BoxFeatured = styled.div`
-  background: #193b4b;
+  background: ${theme.darkBlue};
   border-radius: 20px;
   margin-bottom: 20px;
 `;
@@ -11,7 +12,7 @@ export const BoxFeaturedNot = styled.div`
 `;
 
 export const BoxListPromotions = styled.div`
-  background-color: #fff;
+  background-color: ${theme.white};
   border-radius: 16px;
   padding: 20px;
   display: grid;
@@ -27,7 +28,7 @@ export const Menu = styled.div`
   line-height: 1.4;
   text-align: center;
   &:hover {
-    background-color: #f2f2f2;
+    background-color: ${theme.lightGray};
     border-radius: 8px;
   }
 

@@ -1,14 +1,15 @@
 import styled, { css } from 'styled-components';
+import theme from '../../../constants/theme';
 
 export const Button = styled.button`
   margin: 8px 0;
   padding: 8px 16px;
   border-radius: 8px;
   border: none;
-  background: #d41515;
+  background: ${theme.darkRed};
   font-size: 16px;
   font-weight: bold;
-  color: #fff;
+  color: ${theme.white};
   width: 100%;
   cursor: pointer;
 
@@ -16,7 +17,7 @@ export const Button = styled.button`
     props.outline &&
     css`
       background-color: transparent;
-      color: #fff;
+      color: ${theme.white}
       border-radius: 20px;
     `}
 
@@ -24,7 +25,7 @@ export const Button = styled.button`
     props.outlineTransparente &&
     css`
       background-color: transparent;
-      color: #d41515;
+      color: ${theme.darkRed};
       border-radius: 0;
       border: none;
       text-decoration: underline;

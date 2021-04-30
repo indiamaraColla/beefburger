@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../../constants/theme';
 
 export const Logo = styled.a`
   display: flex;
@@ -10,7 +11,7 @@ export const Logo = styled.a`
 
   span {
     font-size: 24px;
-    color: #fff;
+    color: ${theme.white};
   }
   strong {
     display: block;
@@ -22,6 +23,6 @@ export const Logo = styled.a`
 
   &:hover,
   &:visited {
-    color: #fff;
+    color: ${theme.white};
   }
 `;

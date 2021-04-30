@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import theme from '../../constants/theme';
 
 export const ContainerModal = styled.div`
   padding: 20px;
-  background: #fff;
+  background: ${theme.white};
   border-radius: 18px;
   width: 600px;
 `;
@@ -50,18 +51,18 @@ export const QuantityProduct = styled.span`
 `;
 
 export const ButtonMore = styled.button`
-  color: #fff;
+  color: ${theme.white};
   border-radius: 4px;
-  background-color: #193b4b;
+  background-color: ${theme.darkBlue};
   width: 28px;
   font-size: 18px;
   border: none;
 `;
 
 export const ButtonLess = styled.button`
-  color: #fff;
+  color: ${theme.white};
   border-radius: 4px;
-  background-color: #193b4b;
+  background-color: ${theme.darkBlue};
   width: 28px;
   font-size: 18px;
   border: none;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../../constants/theme';
 
 export const Menu = styled.div`
   padding: 20px;
@@ -9,8 +10,8 @@ export const Menu = styled.div`
 export const DataList = styled.div`
   border-radius: 10px;
   height: 100%;
-  color: #193b4b;
-  background: #fff;
+  color: ${theme.darkBlue};
+  background: ${theme.white};
   padding: 16px;
   margin: 20px 0;
 
@@ -37,20 +38,20 @@ export const Box = styled.div`
 
   &.active,
   &:hover {
-    background: #ffc517;
+    background: ${theme.yellow};
 
     h3 {
-      color: #fff;
+      color: ${theme.white};
     }
   }
 `;
 
 export const Footer = styled.div`
-  background: #193b4b;
+  background: ${theme.darkBlue};
   padding: 16px;
   font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  color: #fff;
+  color: ${theme.white}; ;
 `;

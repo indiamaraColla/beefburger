@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import theme from '../../constants/theme';
 
 export const BoxDescription = styled.div`
-  background: #fff;
+  background: ${theme.white};
   padding: 30px;
   margin: 30px 0;
   border-radius: 18px;
@@ -13,7 +14,7 @@ export const BoxList = styled.div`
   display: grid;
   align-items: center;
   grid-template-rows: 1fr auto 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid ${theme.lightGray};
   padding: 24px 0;
   span {
     font-size: 14px;

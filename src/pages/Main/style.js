@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import sigInBackgrounImg from '../../img/burger.jpg';
+import theme from '../../constants/theme';
 
 export const Container = styled.div`
   height: 100vh;
   display: flex;
   align-items: stretch;
-  background: #193b4b;
-  color: #fff;
+  background: ${theme.darkBlue};
+  color: ${theme.white};
 
   @media all and (max-width: 768px) {
     padding: 1.5rem;
@@ -22,7 +23,7 @@ export const Logo = styled.div`
 
 export const Title = styled.span`
   font-size: 44px;
-  color: #fff;
+  color: ${theme.white}; ;
 `;
 
 export const Image = styled.img`
@@ -46,7 +47,7 @@ export const Content = styled.div`
 
 export const SubTitle = styled.span`
   font-size: 24px;
-  color: #fff;
+  color: ${theme.white};
 `;
 
 export const Link = styled.a`
@@ -56,7 +57,7 @@ export const Link = styled.a`
   text-decoration: none;
 
   &:visited {
-    color: #fff;
+    color: ${theme.white};
   }
 `;
 

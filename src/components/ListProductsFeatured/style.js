@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import theme from '../../constants/theme';
 
 export const BoxList = styled.div`
-  background: #fff;
+  background: ${theme.white};
   border-radius: 16px;
   padding: 20px;
 `;
@@ -12,7 +13,7 @@ export const Menu = styled.div`
   justify-content: space-between;
   line-height: 1.1;
   padding: 8px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid ${theme.lightGray};
 
   @media all and (max-width: 768px) {
     display: flex;

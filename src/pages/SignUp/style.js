@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../../constants/theme';
 
 export const CostumerRegistration = styled.div`
   display: flex;
@@ -10,7 +11,7 @@ export const CostumerRegistration = styled.div`
   .form {
     padding-bottom: 30px;
     margin-top: 20px;
-    background-color: #fff;
+    background-color: ${theme.white};
     padding: 16px;
     border-radius: 16px;
 
@@ -18,7 +19,7 @@ export const CostumerRegistration = styled.div`
       margin: 12px 0;
       padding: 8px;
       border-radius: 8px;
-      border: 2px solid #ccc;
+      border: 2px solid ${theme.lightGray};
       font-size: 14px;
       font-weight: bold;
       width: 100%;

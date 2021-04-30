@@ -4,6 +4,7 @@ import Remover from '../../img/trashCan.png';
 import Headline from '../Typografy/Headline';
 import Subheading from '../Typografy/Subheading';
 import BtnBlueDark from '../Button/BtnDarkBlue';
+import theme from '../../constants/theme';
 
 import { BoxDescription, BoxList, RemoverLixeira, Button, TotalPrice } from './style';
 
@@ -23,7 +24,7 @@ const CheckOrder = ({ onCloseOk, cardItems, showFinish }) => {
                 <img src={Remover} onClick={() => onCloseOk(data.id)} alt="remover" />
               </RemoverLixeira>
               <TotalPrice>
-                <p style={{ color: '#de080d' }}>subtotal</p>
+                <p style={{ color: `${theme.darkRed}` }}>subtotal</p>
                 <Subheading text={`R$ ${data.price * data.count},00`} secondary />
               </TotalPrice>
             </BoxList>

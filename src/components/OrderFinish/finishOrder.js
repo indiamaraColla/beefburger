@@ -3,7 +3,7 @@ import React from 'react';
 import Headline from '../Typografy/Headline';
 import Subheading from '../Typografy/Subheading';
 import BtnBlueDark from '../Button/BtnDarkBlue';
-
+import theme from '../../constants/theme';
 import BagFood from '../../img/bagFood.png';
 
 import { BoxDescription, BoxList, Box, Adress, Button, TotalPrice } from './style';
@@ -30,7 +30,7 @@ const FinishOrder = ({ total, finalizar, handleClickFinish }) => {
               </div>
             </Box>
             <TotalPrice>
-              <p style={{ color: '#de080d' }}>total</p>
+              <p style={{ color: `${theme.darkRed}` }}>total</p>
               <Subheading text={`R$ ${total},00`} secondary />
             </TotalPrice>
           </BoxList>

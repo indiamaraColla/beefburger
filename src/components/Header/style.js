@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import theme from '../../constants/theme';
 
 export const Container = styled.div`
-  background: #193b4b;
+  background: ${theme.darkBlue};
   width: 100%;
   padding: 16px;
 `;

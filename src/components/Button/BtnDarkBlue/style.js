@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import theme from '../../../constants/theme';
 
 export const Button = styled.button`
   margin-top: 18px;
@@ -11,7 +12,7 @@ export const Button = styled.button`
     props.outline &&
     css`
       border: none;
-      color: #193b4b;
+      color: ${theme.darkBlue};
       background: transparent;
       flex-direction: row;
       width: 100px;
@@ -21,9 +22,9 @@ export const Button = styled.button`
   ${(props) =>
     props.blueDark &&
     css`
-      background-color: #193b4b;
-      color: #fff;
-      border: 2px solid #193b4b;
+      background-color: ${theme.darkBlue};
+      color: ${theme.white};
+      border: 2px solid ${theme.darkBlue};
       border-radius: 18px;
       padding: 8px;
       align-items: center;
