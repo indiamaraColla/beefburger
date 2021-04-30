@@ -5,7 +5,7 @@ import Headline from '../Typografy/Headline';
 import Subheading from '../Typografy/Subheading';
 import BtnBlueDark from '../Button/BtnDarkBlue';
 
-import { BoxDescription, BoxList, RemoverLixeira, Button, TotalPrice } from '../CheckOrder/style';
+import { BoxDescription, BoxList, RemoverLixeira, Button, TotalPrice } from './style';
 
 const CheckOrder = ({ onCloseOk, cardItems, showFinish }) => {
   return (

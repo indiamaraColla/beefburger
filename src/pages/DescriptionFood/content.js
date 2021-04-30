@@ -6,7 +6,17 @@ import BtnBlueDark from '../../components/Button/BtnDarkBlue';
 import Headline from '../../components/Typografy/Headline';
 import Subheading from '../../components/Typografy/Subheading';
 
-import { BoxDescription, BoxList, Box, ButtonAdd, CountButton, Description } from './style';
+import {
+  BoxDescription,
+  BoxList,
+  Box,
+  Description,
+  ButtonLess,
+  BoxQuantity,
+  BoxQuantityProduct,
+  ButtonMore,
+  QuantityProduct,
+} from './style';
 import { useBurger } from '../../store/BurgerStore';
 
 const DescriptionFood = ({ type, id, product }) => {
@@ -40,14 +50,14 @@ const DescriptionFood = ({ type, id, product }) => {
         <Box>
           <Subheading text={data.title} secondary />
           <Description>{data.description}</Description>
-          <ButtonAdd>
-            <CountButton>
-              <button onClick={() => setCount(count - 1)}>-</button>
-              <div className="text">{count}</div>
-              <button onClick={() => setCount(count + 1)}>+</button>
-            </CountButton>
+          <BoxQuantity>
+            <BoxQuantityProduct>
+              <ButtonLess onClick={() => setCount(count - 1)}>-</ButtonLess>
+              <QuantityProduct>{count}</QuantityProduct>
+              <ButtonMore onClick={() => setCount(count + 1)}>+</ButtonMore>
+            </BoxQuantityProduct>
             <Subheading text={`R$ ${data.price * count},00`} secondary />
-          </ButtonAdd>
+          </BoxQuantity>
 
           <BtnBlueDark onClick={handleClickComprar} text="põe no carinho" blueDark />
         </Box>

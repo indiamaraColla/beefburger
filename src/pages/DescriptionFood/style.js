@@ -20,27 +20,11 @@ export const BoxList = styled.div`
   display: grid;
   align-items: center;
   grid-template-columns: 1fr;
-
-  p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #193b4b;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    padding-bottom: 4px;
-    border-bottom: 2px solid #ccc;
-  }
 `;
 export const Box = styled.div`
   display: grid;
   align-items: center;
 
-  span {
-    font-size: 14px;
-    margin: 6px 0;
-  }
   img {
     border-radius: 6px;
     margin: 10px 0;
@@ -54,23 +38,44 @@ export const ButtonAdd = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 10px 0;
-
-  button {
-    display: inline-block;
-    width: 28px;
-    font-size: 16px;
-    border: 1px solid #de080d;
-  }
-  .text {
-    padding: 8px;
-  }
 `;
 export const CountButton = styled.div`
   display: flex;
-
-  button {
-    background: #fff;
-    border-radius: 8px;
-  }
 `;
-export const Description = styled.div``;
+
+export const Description = styled.span`
+  font-size: 18px;
+`;
+
+export const BoxQuantity = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+`;
+
+export const BoxQuantityProduct = styled.div`
+  display: flex;
+`;
+
+export const QuantityProduct = styled.span`
+  margin: 0 12px;
+`;
+
+export const ButtonMore = styled.button`
+  color: #fff;
+  border-radius: 4px;
+  background-color: #193b4b;
+  width: 28px;
+  font-size: 18px;
+  border: none;
+`;
+
+export const ButtonLess = styled.button`
+  color: #fff;
+  border-radius: 4px;
+  background-color: #193b4b;
+  width: 28px;
+  font-size: 18px;
+  border: none;
+`;
