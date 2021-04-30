@@ -27,6 +27,8 @@ export const BoxListPromotions = styled.div`
 export const Menu = styled.div`
   line-height: 1.4;
   text-align: center;
+  padding: 8px;
+
   &:hover {
     background-color: ${theme.lightGray};
     border-radius: 8px;
