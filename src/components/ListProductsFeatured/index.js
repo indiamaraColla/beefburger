@@ -1,15 +1,13 @@
 import React from 'react';
+import BtnDarkRed from '../Button/BtnDarkRed';
 
 import Image from '../Image';
 import SubheadingText from '../Typografy/Subheading';
 
-import { BoxList, Menu, BoxData, Description, BoxButton } from './style';
+import { BoxList, Menu, BoxData, BoxDescription, Description, BoxButton } from './style';
 
 const ListProductsFeatured = ({ onHandler, list }) => {
   const products = list || [];
-
-  //   console.log('type list ::::::', list);
-  //   console.log('type list ::::::', type);
 
   return (
     <BoxList>
@@ -19,15 +17,15 @@ const ListProductsFeatured = ({ onHandler, list }) => {
             <BoxData>
               <Image src={item.image} alt={item.title} />
 
-              <div>
+              <BoxDescription>
                 <SubheadingText text={item.title} primary />
                 <Description>{item.description}</Description>
                 <SubheadingText text={`R$ ${item.price},00`} primary />
-              </div>
+              </BoxDescription>
             </BoxData>
 
             <BoxButton>
-              <button onClick={() => onHandler(item)}>adicionar ao ticket</button>
+              <BtnDarkRed onClick={() => onHandler(item)} primary text="adicionar ao ticket" />
             </BoxButton>
           </Menu>
         );
