@@ -18,13 +18,6 @@ export const BoxModal = styled.div`
 export const Box = styled.div`
   display: grid;
   align-items: center;
-
-  img {
-    border-radius: 6px;
-    margin: 10px 0;
-    width: 100%;
-    max-width: 400px;
-  }
 `;
 
 export const ButtonAdd = styled.div`

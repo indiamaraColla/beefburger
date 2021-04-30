@@ -39,7 +39,7 @@ export const Box = styled.div`
   &:hover {
     background: #ffc517;
 
-    p {
+    h3 {
       color: #fff;
     }
   }

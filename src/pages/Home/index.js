@@ -17,6 +17,7 @@ import Promotions from '../ListProducts/ListPromotions';
 
 import Headline from '../../components/Typografy/Headline';
 import Image from '../../components/ImageIcon';
+import SubheadingText from '../../components/Typografy/Subheading';
 
 import { Menu, DataList, Box, Footer } from './style';
 
@@ -41,23 +42,23 @@ const Home = () => {
         <DataList>
           <Box className={menu === 'burger' && 'active'} onClick={() => onHandleMenu('burger')}>
             <Image src={burger} alt="burger" />
-            <p>Burger</p>
+            <SubheadingText text="Burger" primary />
           </Box>
           <Box className={menu === 'pizza' && 'active'} onClick={() => onHandleMenu('pizza')}>
             <Image src={pizza} alt="pizza" />
-            <p>Pizza</p>
+            <SubheadingText text="Pizza" primary />
           </Box>
           <Box className={menu === 'massas' && 'active'} onClick={() => onHandleMenu('massas')}>
             <Image src={massas} alt="massas" />
-            <p>Massas</p>
+            <SubheadingText text="Massas" primary />
           </Box>
           <Box className={menu === 'soup' && 'active'} onClick={() => onHandleMenu('soup')}>
             <Image src={soup} alt="soup" />
-            <p>Soup</p>
+            <SubheadingText text="Soup" primary />
           </Box>
           <Box className={menu === 'snack' && 'active'} onClick={() => onHandleMenu('snack')}>
             <Image src={snack} alt="snack" />
-            <p>Lanches</p>
+            <SubheadingText text="Lanches" primary />
           </Box>
         </DataList>
 
@@ -69,9 +70,7 @@ const Home = () => {
         {menu === 'soup' && <ListSoup />}
         {menu === 'snack' && <ListSnack />}
       </Menu>
-      <Footer>
-        <p>Copyright © 2020 - Beef Burger. Todos os direitos reservados.</p>
-      </Footer>
+      <Footer>Copyright © 2020 - Beef Burger. Todos os direitos reservados.</Footer>
     </>
   );
 };
