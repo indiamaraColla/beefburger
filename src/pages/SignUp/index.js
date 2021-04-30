@@ -13,6 +13,7 @@ import Headline from '../../components/Typografy/Headline';
 
 import signupService from '../../services/signupService';
 import signinService from '../../services/signinService';
+import { routes } from '../../constants';
 
 const initialValues = {
   email: '',
@@ -38,7 +39,7 @@ const SignUp = () => {
   const { setUser } = useAuth();
 
   const handleClickBack = () => {
-    history.push('/signin');
+    history.push(`${routes.signin}`);
   };
 
   const onSubmit = async (values) => {
@@ -51,7 +52,7 @@ const SignUp = () => {
 
       setUser(response.data);
 
-      history.push('/home');
+      history.push(`${routes.home}`);
     } catch (e) {
       toast.error('Erro ao logar, tente novamente!');
     }

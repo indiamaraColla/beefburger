@@ -11,6 +11,7 @@ import CheckOrder from '../../components/OrderFinish/checkOrder';
 import FinishOrder from '../../components/OrderFinish/finishOrder';
 
 import { Menu, MenuDescription, ContainerModal } from './style';
+import { routes } from '../../constants';
 
 const FinalizandoFood = () => {
   const { cardItems, removeCart, setCartItems } = useBurger();
@@ -22,7 +23,7 @@ const FinalizandoFood = () => {
   const history = useHistory();
 
   const handleClickBack = () => {
-    history.push('/home');
+    history.push(`${routes.home}`);
   };
 
   const handleClickFinish = () => {
@@ -35,12 +36,12 @@ const FinalizandoFood = () => {
 
   const onFinishOrder = () => {
     setCartItems('');
-    history.push('/home');
+    history.push(`${routes.home}`);
   };
 
   useEffect(() => {
     if (cardItems.length === 0) {
-      history.push('/home');
+      history.push(`${routes.home}`);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cardItems]);

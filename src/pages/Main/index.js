@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Content, Background, Logo, Title, Image, CardDesc, SubTitle, Link } from './style';
 
 import burger from '../../img/burger.jpg';
+import { routes } from '../../constants';
 
 const Main = () => {
   return (
@@ -17,7 +18,7 @@ const Main = () => {
           <SubTitle>
             <strong> Deu fome?</strong> Sem problema é só...
           </SubTitle>
-          <Link href="/signin">pedir</Link>
+          <Link href={routes.signin}>pedir</Link>
         </CardDesc>
       </Content>
       <Background />

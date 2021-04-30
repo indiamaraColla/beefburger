@@ -10,6 +10,7 @@ import { DataRegister, CostumerRegistration } from './style';
 import ButtonRegister from '../../components/Button/BtnDarkRed';
 import BtnOutline from '../../components/Button/BtnDarkBlue';
 import Headline from '../../components/Typografy/Headline';
+import { routes } from '../../constants';
 
 const initialValues = {
   email: '',
@@ -23,7 +24,7 @@ const SignUp = () => {
   const history = useHistory();
 
   const handleClickBack = () => {
-    history.push('/signin');
+    history.push(`${routes.signin}`);
   };
 
   const onSubmit = async (values) => {
@@ -31,7 +32,7 @@ const SignUp = () => {
       await recorverdPasswordService(values);
 
       toast.success('Verifique seu email');
-      history.push('/signin');
+      history.push(`${routes.signin}`);
     } catch (e) {
       toast.error('Erro ao logar, tente novamente!');
     }

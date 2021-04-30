@@ -11,6 +11,7 @@ import BtnOutline from '../../components/Button/BtnDarkBlue';
 import Headline from '../../components/Typografy/Headline';
 
 import { useAuth } from '../../store/AuthStore';
+import { routes } from '../../constants';
 
 const initialValues = {
   email: '',
@@ -32,24 +33,24 @@ const SignIn = () => {
 
   const handleClickBack = (e) => {
     e.preventDefault();
-    history.push('/');
+    history.push(`${routes.main}`);
   };
 
   const handleClickRegister = (e) => {
     e.preventDefault();
-    history.push('/signup');
+    history.push(`${routes.signup}`);
   };
 
   const handleRecoverPassword = (e) => {
     e.preventDefault();
-    history.push('/newpassword');
+    history.push(`${routes.newpassword}`);
   };
 
   const onSubmit = async (values) => {
     try {
-      const response = await signinService('/signin', values);
+      const response = await signinService(`${routes.signin}`, values);
       setUser(response.data);
-      history.push('/home');
+      history.push(`${routes.home}`);
     } catch (e) {
       toast.error('Erro ao logar, tente novamente!');
     }
