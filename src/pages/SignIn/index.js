@@ -66,16 +66,10 @@ const SignIn = () => {
             <Form className="form">
               <Headline text="Já sou cliente" style={{ marginBottom: '16' }} />
 
-              <Field className="inputForm" placeholder="E-mail" name="email" autoComplete="email" />
+              <Field className="inputForm" placeholder="E-mail" name="email" autoComplete="off" />
               {errors.email && touched.email && <ErrorMessage component="span" name="email" />}
 
-              <Field
-                className="inputForm"
-                type="password"
-                placeholder="Senha"
-                name="password"
-                autoComplete="current-password"
-              />
+              <Field className="inputForm" type="password" placeholder="Senha" name="password" autoComplete="off" />
               {errors.password && touched.password && <ErrorMessage component="span" name="password" />}
 
               <ButtonRegister type="submit" disabled={!isValid}>

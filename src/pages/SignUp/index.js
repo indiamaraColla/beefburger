@@ -66,19 +66,13 @@ const SignUp = () => {
           <Form className="form">
             <Headline text="Criar cadastro" style={{ marginBottom: '16' }} />
 
-            <Field className="inputForm" placeholder="Nome Completo" name="name" autoComplete="username" />
+            <Field className="inputForm" placeholder="Nome Completo" name="name" autoComplete="off" />
             {errors.name && touched.name && <ErrorMessage component="span" name="name" />}
 
-            <Field className="inputForm" placeholder="E-mail" name="email" autoComplete="email" />
+            <Field className="inputForm" placeholder="E-mail" name="email" autoComplete="off" />
             {errors.email && touched.email && <ErrorMessage component="span" name="email" />}
 
-            <Field
-              className="inputForm"
-              type="password"
-              placeholder="Senha"
-              name="password"
-              autoComplete="current-password"
-            />
+            <Field className="inputForm" type="password" placeholder="Senha" name="password" autoComplete="off" />
             {errors.password && touched.password && <ErrorMessage component="span" name="password" />}
 
             <Field
@@ -86,7 +80,7 @@ const SignUp = () => {
               type="password"
               placeholder="Confirme sua senha"
               name="confirmPassword"
-              autoComplete="new-password"
+              autoComplete="off"
             />
             {errors.confirmPassword && touched.confirmPassword && (
               <ErrorMessage component="span" name="confirmPassword" />
